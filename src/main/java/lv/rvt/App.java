@@ -2,18 +2,26 @@ package lv.rvt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
     {
-    
-        // Once upon a time
+        
+        Scanner scanner = new Scanner(System.in);
 
-        String teikum1 = "Once upon a time";
-        String teikum2 = "there was";
-        String teikum3 = "a dinosaur";
-        System.out.println(teikum1); System.out.println(teikum2); System.out.println(teikum3);
+        System.out.println("Ievadi savu vārdu: ");
+
+        String name = scanner.nextLine();
+
+        System.out.println("Ieavadi savu uzvārdu: ");
+        String lastname = scanner.nextLine();
+
+        System.out.println("Ievadi savu grupu: ");
+        String group = scanner.nextLine();
+
+        System.out.println("Students: " + name + " " + lastname + ", Grupa: " + group);
 
     }
 
