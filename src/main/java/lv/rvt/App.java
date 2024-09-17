@@ -93,18 +93,40 @@ public class App
         //     System.out.println("Speeding ticket!");
         // }
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Give the first number: ");
+        // int cipars1 = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Give the second number: ");
+        // int cipars2 = Integer.valueOf(scanner.nextLine());
+        // if (cipars1 > cipars2) {
+        //     System.out.println("Greater number is: " + cipars1);
+        // } else if (cipars2 > cipars1) {
+        //     System.out.println("Greater is number: " + cipars2);
+        // } else {
+        //     System.out.println("The numbers are equal!");
+        // }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give the first number: ");
-        int cipars1 = Integer.valueOf(scanner.nextLine());
-        System.out.println("Give the second number: ");
-        int cipars2 = Integer.valueOf(scanner.nextLine());
-        if (cipars1 > cipars2) {
-            System.out.println("Greater number is: " + cipars1);
-        } else if (cipars2 > cipars1) {
-            System.out.println("Greater is number: " + cipars2);
+        System.out.println("Give points [0-100]:");
+        int points = Integer.valueOf(scanner.nextLine());
+        if (points < 0) {
+            System.out.println("Grade: impossible!");
+        } else if (points >= 0 && points <= 49) {
+            System.out.println("Grade: failed");
+        } else if (points >= 50 && points <= 59) {
+            System.out.println("Grade: " + 1);
+        } else if (points >= 60 && points <= 69) {
+            System.out.println("Grade: " + 2);
+        } else if (points >= 70 && points <= 79) {
+            System.out.println("Grade: " + 3);
+        } else if (points >= 80 && points <= 89) {
+            System.out.println("Grade: " + 4);
+        } else if (points >= 90 && points <= 100) {
+            System.out.println("Grade: " + 5);
         } else {
-            System.out.println("The numbers are equal!");
+            System.out.println("Grade: incredible!");
         }
     }
 
