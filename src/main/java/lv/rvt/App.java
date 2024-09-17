@@ -85,12 +85,26 @@ public class App
         // System.out.println(result3); // prints 1.0
 
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Give speed:");
+        // int atrums = Integer.valueOf(scanner.nextLine());
+        // if (atrums > 120) {
+        //     System.out.println("Speeding ticket!");
+        // }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give speed:");
-        int atrums = Integer.valueOf(scanner.nextLine());
-        if (atrums > 120) {
-            System.out.println("Speeding ticket!");
+        System.out.println("Give the first number: ");
+        int cipars1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number: ");
+        int cipars2 = Integer.valueOf(scanner.nextLine());
+        if (cipars1 > cipars2) {
+            System.out.println("Greater number is: " + cipars1);
+        } else if (cipars2 > cipars1) {
+            System.out.println("Greater is number: " + cipars2);
+        } else {
+            System.out.println("The numbers are equal!");
         }
     }
 
