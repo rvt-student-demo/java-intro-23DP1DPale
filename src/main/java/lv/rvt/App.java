@@ -167,12 +167,25 @@ public class App
         // System.out.println("Number of numbers: " + numOfNum);
         // System.out.println("Sum of the numbers: " + sum);
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // int start = Integer.valueOf(scanner.nextLine());
+
+        // for (int i = start; i < 101; i++) {
+        //     System.out.println(i);
+        // }
+
         Scanner scanner = new Scanner(System.in);
 
-        int start = Integer.valueOf(scanner.nextLine());
+        System.out.println("Last number? ");
+        int lastNum = Integer.valueOf(scanner.nextLine());
+        int sum = 0;
 
-        for (int i = start; i < 101; i++) {
-            System.out.println(i);
+        for (int i = 1; i <= lastNum; i++) {
+            sum += i;
         }
+
+        System.out.println("The sum is " + sum);
+
     }
 }
