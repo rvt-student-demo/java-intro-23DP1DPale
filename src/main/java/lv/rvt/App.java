@@ -147,24 +147,32 @@ public class App
         //     System.out.println("No tax!");
         // }
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // int numOfNum = 0;
+        // int sum = 0;
+
+        // while (true) {
+        //     System.out.println("Give a number:");
+        //     int number = Integer.valueOf(scanner.nextLine());
+
+        //     if (number == 0) {
+        //         break;
+        //     }
+
+        //     sum = sum + number;
+        //     numOfNum = numOfNum + 1;
+        // }
+
+        // System.out.println("Number of numbers: " + numOfNum);
+        // System.out.println("Sum of the numbers: " + sum);
+
         Scanner scanner = new Scanner(System.in);
 
-        int numOfNum = 0;
-        int sum = 0;
+        int start = Integer.valueOf(scanner.nextLine());
 
-        while (true) {
-            System.out.println("Give a number:");
-            int number = Integer.valueOf(scanner.nextLine());
-
-            if (number == 0) {
-                break;
-            }
-
-            sum = sum + number;
-            numOfNum = numOfNum + 1;
+        for (int i = start; i < 101; i++) {
+            System.out.println(i);
         }
-
-        System.out.println("Number of numbers: " + numOfNum);
-        System.out.println("Sum of the numbers: " + sum);
     }
 }
