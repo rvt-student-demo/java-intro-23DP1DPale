@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
+    // public static void main( String[] args )
+    // {
         
         // Scanner scanner = new Scanner(System.in);
 
@@ -187,38 +187,66 @@ public class App
 
         // System.out.println("The sum is " + sum);
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give numbers:");
-        int sum = 0;
-        int numOfNum = 0;
-        int even = 0;
-        int odd = 0;
+        // System.out.println("Give numbers:");
+        // int sum = 0;
+        // int numOfNum = 0;
+        // int even = 0;
+        // int odd = 0;
 
-        while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
 
-            if (number == -1) {
-                break;
-            }
+        //     if (number == -1) {
+        //         break;
+        //     }
 
-            if (number % 2 == 0) {
-                even++;
-            } else {
-                odd++;
-            }
+        //     if (number % 2 == 0) {
+        //         even++;
+        //     } else {
+        //         odd++;
+        //     }
 
-            sum += number;
-            numOfNum++;
-        }
+        //     sum += number;
+        //     numOfNum++;
+        // }
         
-        double average = (double) sum / numOfNum;
-        System.out.println("Thx! Bye!");
-        System.out.println("Sum: " + sum);
-        System.out.println("Numbers: " + numOfNum);
-        System.out.println("Average: " + average);
-        System.out.println("Even: " + even);
-        System.out.println("Odd: " + odd);
+        // double average = (double) sum / numOfNum;
+        // System.out.println("Thx! Bye!");
+        // System.out.println("Sum: " + sum);
+        // System.out.println("Numbers: " + numOfNum);
+        // System.out.println("Average: " + average);
+        // System.out.println("Even: " + even);
+        // System.out.println("Odd: " + odd);
 
+    // }
+
+    // public static void main( String[] args )
+    // {
+    //     Scanner scanner = new Scanner(System.in);
+
+    //     System.out.println("How many times?");
+    //     int times = Integer.valueOf(scanner.nextLine());
+    //     for (int i = 0; i < times; i++) {
+    //         printText();
+    //     }
+        
+    // }
+
+    // public static void printText() {
+    //     System.out.println("In a hole in the ground there lived a method");
+    // }
+
+    public static void main(String[] args) {
+        divisibleByThreeInRange(2, 10);
+    }
+
+    public static void divisibleByThreeInRange(int x, int y) {
+        for (int i = x; i <= y; i++) {
+            if (i % 3 == 0) {
+                System.out.println(i);
+            }
+        }
     }
 }
