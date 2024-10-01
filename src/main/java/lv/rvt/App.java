@@ -175,17 +175,50 @@ public class App
         //     System.out.println(i);
         // }
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Last number? ");
+        // int lastNum = Integer.valueOf(scanner.nextLine());
+        // int sum = 0;
+
+        // for (int i = 1; i <= lastNum; i++) {
+        //     sum += i;
+        // }
+
+        // System.out.println("The sum is " + sum);
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Last number? ");
-        int lastNum = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give numbers:");
         int sum = 0;
+        int numOfNum = 0;
+        int even = 0;
+        int odd = 0;
 
-        for (int i = 1; i <= lastNum; i++) {
-            sum += i;
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+
+            if (number == -1) {
+                break;
+            }
+
+            if (number % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+
+            sum += number;
+            numOfNum++;
         }
-
-        System.out.println("The sum is " + sum);
+        
+        double average = (double) sum / numOfNum;
+        System.out.println("Thx! Bye!");
+        System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + numOfNum);
+        System.out.println("Average: " + average);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
 
     }
 }
