@@ -238,15 +238,52 @@ public class App
     //     System.out.println("In a hole in the ground there lived a method");
     // }
 
+    // public static void main(String[] args) {
+    //     divisibleByThreeInRange(2, 10);
+    // }
+
+    // public static void divisibleByThreeInRange(int x, int y) {
+    //     for (int i = x; i <= y; i++) {
+    //         if (i % 3 == 0) {
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+    
     public static void main(String[] args) {
-        divisibleByThreeInRange(2, 10);
+        printStars(5);
+        printStars(3);
+        printStars(9);
+        System.out.println();
+        printSquare(4);
+        System.out.println();
+        printRectangle(17, 3);
+        System.out.println();
+        printTriangle(4);
     }
 
-    public static void divisibleByThreeInRange(int x, int y) {
-        for (int i = x; i <= y; i++) {
-            if (i % 3 == 0) {
-                System.out.println(i);
-            }
+    public static void printStars(int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+    public static void printSquare(int size) {
+        for (int i = 0; i < size; i++) {
+            printStars(4);
+        }
+    }
+
+    public static void printRectangle(int width, int height) {
+        for (int i = 0; i < height; i++) {
+            printStars(width);
+        }
+    }
+
+    public static void printTriangle(int size) {
+        for (int i = 0; i < size; i++) {
+            printStars(i+1);
         }
     }
 }
