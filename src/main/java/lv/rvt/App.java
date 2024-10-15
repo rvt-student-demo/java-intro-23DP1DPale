@@ -321,18 +321,33 @@ public class App
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> nameList = new ArrayList<>();
+        // ArrayList<String> nameList = new ArrayList<>();
+
+        // while (true) {
+        //     String name = scanner.nextLine();
+            
+        //     if (name == "") {
+        //         break;
+        //     }
+
+        //     nameList.add(name);
+        // }
+
+        // System.out.println(nameList.get(2));
+
+
+        ArrayList<Integer> numList = new ArrayList<>();
+        int sum = 0;
 
         while (true) {
-            String name = scanner.nextLine();
-            
-            if (name == "") {
+            int number = Integer.valueOf(scanner.nextLine());
+
+            if (number == 0) {
                 break;
             }
-
-            nameList.add(name);
+            sum += number;
+            numList.add(number);
         }
-
-        System.out.println(nameList.get(2));
+        System.out.println(sum);
     }
 }
