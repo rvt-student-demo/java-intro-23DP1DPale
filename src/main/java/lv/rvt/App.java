@@ -318,8 +318,8 @@ public class App
     //     printStars(3);
     // }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    // public static void main(String[] args) {
+    //     Scanner scanner = new Scanner(System.in);
 
         // ArrayList<String> nameList = new ArrayList<>();
 
@@ -350,33 +350,59 @@ public class App
         // }
         // System.out.println(sum);
 
-        ArrayList<Integer> numList = new ArrayList<>();
+        // ArrayList<Integer> numList = new ArrayList<>();
 
-        while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
 
-            if (number == -1) {
-                break;
+        //     if (number == -1) {
+        //         break;
+        //     }
+
+        //     numList.add(number);
+        // }
+        // System.out.print("From where? ");
+        // int start = Integer.valueOf(scanner.nextLine());
+        // while (start > numList.size()-1) {
+        //     System.out.print("Out of Bound! From where? ");
+        //     start = Integer.valueOf(scanner.nextLine());
+        // }
+
+        // System.out.print("To where? ");
+        // int end = Integer.valueOf(scanner.nextLine());
+        // while (end > numList.size()-1) {
+        //     System.out.print("Out of Bound! To where? ");
+        //     end = Integer.valueOf(scanner.nextLine());
+        // }
+
+        // for (int i = start; i <= end; i++) {
+        //     System.out.println(numList.get(i));
+        // }
+    // }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(6);
+        numbers.add(-1);
+        numbers.add(5);
+        numbers.add(1);
+
+        System.out.println("The numbers in the range [0, 5]");
+        printNumbersInRange(numbers, 0, 5);
+
+        System.out.println("The numbers in the range [3, 10]");
+        printNumbersInRange(numbers, 3, 10);
+    }
+
+    public static void printNumbersInRange(ArrayList<Integer> numbers, int min, int max) {
+        for (int number: numbers) {
+            if (number >= min && number <= max) {
+                System.out.println(number);
             }
-
-            numList.add(number);
-        }
-        System.out.print("From where? ");
-        int start = Integer.valueOf(scanner.nextLine());
-        while (start > numList.size()-1) {
-            System.out.print("Out of Bound! From where? ");
-            start = Integer.valueOf(scanner.nextLine());
-        }
-
-        System.out.print("To where? ");
-        int end = Integer.valueOf(scanner.nextLine());
-        while (end > numList.size()-1) {
-            System.out.print("Out of Bound! To where? ");
-            end = Integer.valueOf(scanner.nextLine());
-        }
-
-        for (int i = start; i <= end; i++) {
-            System.out.println(numList.get(i));
         }
     }
+
+
 }
