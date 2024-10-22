@@ -336,18 +336,47 @@ public class App
         // System.out.println(nameList.get(2));
 
 
+        // ArrayList<Integer> numList = new ArrayList<>();
+        // int sum = 0;
+
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
+
+        //     if (number == 0) {
+        //         break;
+        //     }
+        //     sum += number;
+        //     numList.add(number);
+        // }
+        // System.out.println(sum);
+
         ArrayList<Integer> numList = new ArrayList<>();
-        int sum = 0;
 
         while (true) {
             int number = Integer.valueOf(scanner.nextLine());
 
-            if (number == 0) {
+            if (number == -1) {
                 break;
             }
-            sum += number;
+
             numList.add(number);
         }
-        System.out.println(sum);
+        System.out.print("From where? ");
+        int start = Integer.valueOf(scanner.nextLine());
+        while (start > numList.size()-1) {
+            System.out.print("Out of Bound! From where? ");
+            start = Integer.valueOf(scanner.nextLine());
+        }
+
+        System.out.print("To where? ");
+        int end = Integer.valueOf(scanner.nextLine());
+        while (end > numList.size()-1) {
+            System.out.print("Out of Bound! To where? ");
+            end = Integer.valueOf(scanner.nextLine());
+        }
+
+        for (int i = start; i <= end; i++) {
+            System.out.println(numList.get(i));
+        }
     }
 }
