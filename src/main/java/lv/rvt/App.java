@@ -381,28 +381,54 @@ public class App
     // }
 
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(3);
-        numbers.add(2);
-        numbers.add(6);
-        numbers.add(-1);
-        numbers.add(5);
-        numbers.add(1);
+        Scanner scanner = new Scanner(System.in);
+    //     ArrayList<Integer> numbers = new ArrayList<>();
+    //     numbers.add(3);
+    //     numbers.add(2);
+    //     numbers.add(6);
+    //     numbers.add(-1);
+    //     numbers.add(5);
+    //     numbers.add(1);
 
-        System.out.println("The numbers in the range [0, 5]");
-        printNumbersInRange(numbers, 0, 5);
+    //     System.out.println("The numbers in the range [0, 5]");
+    //     printNumbersInRange(numbers, 0, 5);
 
-        System.out.println("The numbers in the range [3, 10]");
-        printNumbersInRange(numbers, 3, 10);
-    }
+    //     System.out.println("The numbers in the range [3, 10]");
+    //     printNumbersInRange(numbers, 3, 10);
+    // }
 
-    public static void printNumbersInRange(ArrayList<Integer> numbers, int min, int max) {
-        for (int number: numbers) {
-            if (number >= min && number <= max) {
-                System.out.println(number);
+    // public static void printNumbersInRange(ArrayList<Integer> numbers, int min, int max) {
+    //     for (int number: numbers) {
+    //         if (number >= min && number <= max) {
+    //             System.out.println(number);
+    //         }
+    //     }
+    // }
+    
+    // Fixed size: 4 elementi
+    // new int[4]
+    // int[] numbers = {1,2,3,4};
+    // numbers[5] = 12;
+        
+        String longstName = "";
+        ArrayList<String> numList = new ArrayList<>();
+        int sum = 0;
+        while (true) {
+            String nameAndAge = scanner.nextLine();
+
+            if (nameAndAge.equals("")) {
+                break;
+            }
+
+            String[] names = nameAndAge.split(",");
+            numList.add(names[1]);
+            sum += Integer.valueOf(names[1]);
+
+            if (names[0].length() > longstName.length() ) {
+                longstName = names[0];
             }
         }
+        System.out.println("Longest name: " + longstName);
+        System.out.println("Average of the birth years: " + ((double) sum / numList.size()));
     }
-
-
 }
