@@ -431,9 +431,9 @@ public class App
         // antti.printPerson();
         // martin.printPerson();
 
-        Product product1 = new Product("Banana", 1.1, 13);
+        // Product product1 = new Product("Banana", 1.1, 13);
 
-        product1.printProduct();
+        // product1.printProduct();
 
         // Person ada = new Person("Ada");
         // Person antti = new Person("Antti");
@@ -447,5 +447,15 @@ public class App
 
         // ada.printPerson();
         // antti.printPerson();
+        
+        DecreasingCounter counter = new DecreasingCounter(100);
+
+        counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
     }
 }
