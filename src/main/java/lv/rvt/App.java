@@ -431,6 +431,21 @@ public class App
         // antti.printPerson();
         // martin.printPerson();
 
-        Product fruit = new Product("Banana");
+        Product product1 = new Product("Banana", 1.1, 13);
+
+        product1.printProduct();
+
+        // Person ada = new Person("Ada");
+        // Person antti = new Person("Antti");
+
+        // ada.printPerson();
+        // antti.printPerson();
+        // System.out.println("");
+
+        // ada.growOlder();
+        // ada.growOlder();
+
+        // ada.printPerson();
+        // antti.printPerson();
     }
 }
