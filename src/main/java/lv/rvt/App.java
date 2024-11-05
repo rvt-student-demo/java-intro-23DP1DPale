@@ -448,14 +448,42 @@ public class App
         // ada.printPerson();
         // antti.printPerson();
         
-        DecreasingCounter counter = new DecreasingCounter(100);
+        // DecreasingCounter counter = new DecreasingCounter(100);
 
-        counter.printValue();
+        // counter.printValue();
 
-        counter.reset();
-        counter.printValue();
+        // counter.reset();
+        // counter.printValue();
 
-        counter.decrement();
-        counter.printValue();
+        // counter.decrement();
+        // counter.printValue();
+
+        // Person pekka = new Person("Pekka");
+        // Person antti = new Person("Antti");
+
+        // pekka.growOlder();
+        // pekka.growOlder();
+
+        // antti.growOlder();
+
+        // System.out.println("Pekka's age: " + pekka.returnAge());
+        // System.out.println("Antti's age: " + antti.returnAge());
+        // int combined = pekka.returnAge() + antti.returnAge();
+
+        // System.out.println("Pekka's and Antti's combined age " + combined + " years");
+
+        // Animal animal1 = new Animal("cat");
+        // Animal animal2 = new Animal("dog");
+
+        // System.out.println(animal1);
+        // System.out.println(animal2);
+
+        Agent bond = new Agent("James", "Bond");
+
+        bond.toString();
+        System.out.println(bond);
+
+        Agent ionic = new Agent("Ionic", "Bond");
+        System.out.println(ionic);
     }
 }

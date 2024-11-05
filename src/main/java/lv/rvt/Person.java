@@ -13,10 +13,21 @@ public class Person {
         System.out.println(this.name + ", age " + this.age + " years");
     }
 
-    // growOlder() method has been added
     public void growOlder() {
         if (this.age < 30) {
             this.age++;
         }
+    }
+
+    public int returnAge() {
+        return this.age;
+    }
+
+    public boolean isOfLegalAge() {
+        return this.age >= 18;
+    }
+    
+    public String getName() {
+        return this.name;
     }
 }
