@@ -478,12 +478,40 @@ public class App
         // System.out.println(animal1);
         // System.out.println(animal2);
 
-        Agent bond = new Agent("James", "Bond");
+        // Agent bond = new Agent("James", "Bond");
 
-        bond.toString();
-        System.out.println(bond);
+        // bond.toString();
+        // System.out.println(bond);
 
-        Agent ionic = new Agent("Ionic", "Bond");
-        System.out.println(ionic);
+        // Agent ionic = new Agent("Ionic", "Bond");
+        // System.out.println(ionic);
+
+        // Person pers1 = new Person("John");
+        // pers1.setHeight(175);
+        // pers1.setWeight(64);
+        // System.out.println(pers1.getName() + " body mass index is " + pers1.bodyMassIndex());
+
+        Statistics sum = new Statistics();
+        Statistics sum_even = new Statistics();
+        Statistics sum_odd = new Statistics();
+
+        System.out.println("Enter numbers:");
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {
+                break;
+            }
+            if (number % 2 == 0) {
+                sum_even.addNumber(number);
+            }
+            if (number % 2 != 0) {
+                sum_odd.addNumber(number);
+            }
+            sum.addNumber(number);
+        }
+        
+        System.out.println("Sum: " + sum.sum());
+        System.out.println("Sum of even numbers: " + sum_even.sum());
+        System.out.println("Sum of odd numbers: " + sum_odd.sum());
     }
 }
