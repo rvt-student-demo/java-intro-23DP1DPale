@@ -380,7 +380,7 @@ public class App
         // }
     // }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         
         // String longstName = "";
@@ -514,23 +514,30 @@ public class App
         // System.out.println("Sum of even numbers: " + sum_even.sum());
         // System.out.println("Sum of odd numbers: " + sum_odd.sum());
 
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
+        // PaymentCard paulsCard = new PaymentCard(20);
+        // PaymentCard mattsCard = new PaymentCard(30);
 
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
+        // paulsCard.eatHeartily();
+        // mattsCard.eatAffordably();
+        // System.out.println(paulsCard);
+        // System.out.println(mattsCard);
 
-        paulsCard.addMoney(20);
-        mattsCard.eatHeartily();
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
+        // paulsCard.addMoney(20);
+        // mattsCard.eatHeartily();
+        // System.out.println(paulsCard);
+        // System.out.println(mattsCard);
         
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
-        mattsCard.addMoney(50);
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
+        // paulsCard.eatAffordably();
+        // paulsCard.eatAffordably();
+        // mattsCard.addMoney(50);
+        // System.out.println(paulsCard);
+        // System.out.println(mattsCard);
+
+        BufferedReader reader = Utils.getReader("data.csv");
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
     }
 }
