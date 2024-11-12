@@ -491,27 +491,46 @@ public class App
         // pers1.setWeight(64);
         // System.out.println(pers1.getName() + " body mass index is " + pers1.bodyMassIndex());
 
-        Statistics sum = new Statistics();
-        Statistics sum_even = new Statistics();
-        Statistics sum_odd = new Statistics();
+        // Statistics sum = new Statistics();
+        // Statistics sum_even = new Statistics();
+        // Statistics sum_odd = new Statistics();
 
-        System.out.println("Enter numbers:");
-        while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number == -1) {
-                break;
-            }
-            if (number % 2 == 0) {
-                sum_even.addNumber(number);
-            }
-            if (number % 2 != 0) {
-                sum_odd.addNumber(number);
-            }
-            sum.addNumber(number);
-        }
+        // System.out.println("Enter numbers:");
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
+        //     if (number == -1) {
+        //         break;
+        //     }
+        //     if (number % 2 == 0) {
+        //         sum_even.addNumber(number);
+        //     }
+        //     if (number % 2 != 0) {
+        //         sum_odd.addNumber(number);
+        //     }
+        //     sum.addNumber(number);
+        // }
         
-        System.out.println("Sum: " + sum.sum());
-        System.out.println("Sum of even numbers: " + sum_even.sum());
-        System.out.println("Sum of odd numbers: " + sum_odd.sum());
+        // System.out.println("Sum: " + sum.sum());
+        // System.out.println("Sum of even numbers: " + sum_even.sum());
+        // System.out.println("Sum of odd numbers: " + sum_odd.sum());
+
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
+
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
+        
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
     }
 }
