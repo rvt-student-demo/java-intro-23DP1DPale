@@ -533,11 +533,28 @@ public class App
         // System.out.println(paulsCard);
         // System.out.println(mattsCard);
 
-        BufferedReader reader = Utils.getReader("data.csv");
-        String line;
+        // BufferedReader reader = Utils.getReader("persons.csv");
+        // String line;
 
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
+        // reader.readLine();
+        // while ((line = reader.readLine()) != null) {
+        //     String[] parts = line.split(", ");
+        //     Person pers = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
+        //     pers.printPerson();
+        // }
+        // reader.close();
+
+        Timer timer = new Timer();
+
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
+
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
+
+            }
         }
     }
 }
