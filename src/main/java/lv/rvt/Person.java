@@ -3,14 +3,24 @@ package lv.rvt;
 public class Person {
     private String name;
     private int age;
-    private int weight;
-    private int height;
+    private double weight;
+    private double height;
 
-    public Person(String initialName, int initialAge, int initialWeight, int initialHeight) {
-        this.age = initialAge;
-        this.weight = initialWeight;
-        this.height = initialHeight;
-        this.name = initialName;
+    // All args class constructor
+    public Person(String Name, int Age, double Weight, double Height) {
+        this.age = Age;
+        this.weight = Weight;
+        this.height = Height;
+        this.name = Name;
+    }
+
+    // Second constructor woth only one parameter
+    public Person(String name) {
+        this(name, 0, 0, 0);
+    }
+
+    public Person() {
+        
     }
 
     public void setHeight(int newHeight) {
@@ -24,6 +34,15 @@ public class Person {
     public double bodyMassIndex() {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
+    }
+
+    public double maximumHeartRate() {
+        return 206.3 - (0.711 * this.age);
+    }
+
+    public String toString() {
+        return this.name + ", BMI: " + this.bodyMassIndex()
+            + ", maximum heart rate: " + this.maximumHeartRate();
     }
 
     public void printPerson() {
