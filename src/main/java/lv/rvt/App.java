@@ -558,12 +558,18 @@ public class App
         // }
         
 
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+        // Product tapeMeasure = new Product("Tape measure");
+        // Product plaster = new Product("Plaster", "home improvement section");
+        // Product tyre = new Product("Tyre", 5);
 
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        // System.out.println(tapeMeasure);
+        // System.out.println(plaster);
+        // System.out.println(tyre);
+
+        Counter counter = new Counter(50);
+
+        counter.decrease(25);
+        counter.increase(100);
+        System.out.println(counter.Value());
     }
 }
