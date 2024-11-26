@@ -566,10 +566,12 @@ public class App
         // System.out.println(plaster);
         // System.out.println(tyre);
 
-        Counter counter = new Counter(50);
+        // Counter counter = new Counter(50);
 
-        counter.decrease(25);
-        counter.increase(100);
-        System.out.println(counter.Value());
+        // counter.decrease(25);
+        // counter.increase(100);
+        // System.out.println(counter.Value());
+
+        
     }
 }
