@@ -572,6 +572,15 @@ public class App
         // counter.increase(100);
         // System.out.println(counter.Value());
 
-        
+
+        // Izlasīt persons.scv imantojot BufferReader  objektu
+
+        BufferedReader reader = Helper.gerReader("persons.csv");
+
+        String line;
+        reader.readLine(); // Title row - Mēs ignorējam 1 rindu
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
     }
 }
