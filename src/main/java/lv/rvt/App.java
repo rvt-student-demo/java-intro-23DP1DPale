@@ -575,12 +575,27 @@ public class App
 
         // Izlasīt persons.scv imantojot BufferReader  objektu
 
-        BufferedReader reader = Helper.gerReader("persons.csv");
+        // BufferedReader reader = Helper.gerReader("persons.csv");
 
-        String line;
-        reader.readLine(); // Title row - Mēs ignorējam 1 rindu
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
+        // int age_sum = 0;
+        // int age_count = 0;
+        // String line;
+        // reader.readLine(); // Title row - Mēs ignorējam 1 rindu
+        // while ((line = reader.readLine()) != null) {
+
+        //     String[] parts = line.split(", ");
+        //     age_sum += Integer.valueOf(parts[1]);
+        //     age_count++;
+
+        //     // Kā uzzināt personu vidējo vecumu no dotā csv faila
+        // }
+
+        // System.out.println("Vidējais personu vecums ir " + (double) age_sum/age_count + " gadi");
+
+        ArrayList<Person> persons = PersonManager.getPersonList();
+
+        for (Person person : persons) {
+            System.out.println(person);
         }
     }
 }

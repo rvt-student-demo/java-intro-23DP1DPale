@@ -41,8 +41,7 @@ public class Person {
     }
 
     public String toString() {
-        return this.name + ", BMI: " + this.bodyMassIndex()
-            + ", maximum heart rate: " + this.maximumHeartRate();
+        return "Name: " + this.name + ", age: " + this.age + ", weight: " + this.weight + ", height: " + this.height;
     }
 
     public void printPerson() {
