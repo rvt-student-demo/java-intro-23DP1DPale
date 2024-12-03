@@ -2,3 +2,6 @@ name, age, weight, height
 John, 28, 70, 175
 Jane, 34, 60, 165
 Alice, 45, 68, 160
+Peter, 21, 65.0, 176.0
+Maija, 20, 50.0, 160.0
+Mike, 19, 64.0, 172.0
