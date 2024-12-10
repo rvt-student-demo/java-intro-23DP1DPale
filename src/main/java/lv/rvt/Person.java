@@ -66,6 +66,18 @@ public class Person {
         return this.name;
     }
 
+    public int getAge() {
+        return this.age;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public double getHeight() {
+        return this.height;
+    }
+
     public String toCsvRow() {
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
     }

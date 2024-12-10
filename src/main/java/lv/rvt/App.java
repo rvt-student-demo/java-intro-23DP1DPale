@@ -600,48 +600,69 @@ public class App
         // }
 
 
-        System.out.println("Hello. choose your command: ");
-        System.out.println("show - shows all persons");
-        System.out.println("add - add a person");
-        System.out.println("help - see avaivable commands");
-        System.out.println("exit");
+        // System.out.println("Hello. choose your command: ");
+        // System.out.println("show - shows all persons");
+        // System.out.println("add - add a person");
+        // System.out.println("help - see avaivable commands");
+        // System.out.println("exit");
 
-        while (true) {
+        // while (true) {
+        //     String command = scanner.nextLine();
+
+        //     if (command.equals("show")) {
+        //         ArrayList<Person> persons = PersonManager.getPersonList();
+
+        //         for (Person person : persons) {
+        //             System.out.println(person);
+        //         }
+
+        //     } else if (command.equals("add")) {
+        //         System.out.println("Please enter name: ");
+        //         String name = scanner.nextLine();
+        //         System.out.println("Please enter age: ");
+        //         int age = Integer.valueOf(scanner.nextLine());
+        //         System.out.println("Please enter weight: ");
+        //         Double weight = Double.valueOf(scanner.nextLine());
+        //         System.out.println("Please enter height: ");
+        //         Double height = Double.valueOf(scanner.nextLine());
+
+        //         Person person = new Person(name, age, weight, height);
+
+        //         PersonManager.addPerson(person);
+
+        //     } else if (command.equals("help")) {
+        //         System.out.println("Hello. choose your command: ");
+        //         System.out.println("show - shows all persons");
+        //         System.out.println("add - add a person");
+        //         System.out.println("help - see avaivable commands");
+        //         System.out.println("exit");
+
+        //     } else if (command.equals("exit")) {
+        //         break;
+        //     }
+        // }
+
+        // System.out.println("Bye bye");
+
+        boolean isProgramRunning = true;
+        System.out.println("Welcome to person manager, type \"help\" to see avaible commands.");
+        while (isProgramRunning) {
             String command = scanner.nextLine();
 
-            if (command.equals("show")) {
+            if (command.equals("exit")) {
+                System.out.println("Thanks, bye bye!");
+                isProgramRunning = false;
+            } else if (command.equals("show")) {
                 ArrayList<Person> persons = PersonManager.getPersonList();
-
-                for (Person person : persons) {
-                    System.out.println(person);
+                System.out.println("----------------------------------------------------");
+                System.out.println("|  Name  | Age | Weight | Height | Body mass index |");
+                System.out.println("----------------------------------------------------");
+                for (Person person: persons) {
+                    System.out.printf("| %-7s| %-4d| %-7.1f| %-7.1f| %-16.2f|\n", person.getName(), person.getAge(), person.getWeight(), person.getHeight(), person.bodyMassIndex());
                 }
-
-            } else if (command.equals("add")) {
-                System.out.println("Please enter name: ");
-                String name = scanner.nextLine();
-                System.out.println("Please enter age: ");
-                int age = Integer.valueOf(scanner.nextLine());
-                System.out.println("Please enter weight: ");
-                Double weight = Double.valueOf(scanner.nextLine());
-                System.out.println("Please enter height: ");
-                Double height = Double.valueOf(scanner.nextLine());
-
-                Person person = new Person(name, age, weight, height);
-
-                PersonManager.addPerson(person);
-
-            } else if (command.equals("help")) {
-                System.out.println("Hello. choose your command: ");
-                System.out.println("show - shows all persons");
-                System.out.println("add - add a person");
-                System.out.println("help - see avaivable commands");
-                System.out.println("exit");
-
-            } else if (command.equals("exit")) {
-                break;
+                System.out.println("----------------------------------------------------");
             }
+            System.out.println("Your command was: " + command);
         }
-
-        System.out.println("Bye bye");
     }
 }
