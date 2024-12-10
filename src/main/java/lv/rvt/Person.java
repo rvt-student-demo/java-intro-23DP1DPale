@@ -3,11 +3,11 @@ package lv.rvt;
 public class Person {
     private String name;
     private int age;
-    private double weight;
-    private double height;
+    private int weight;
+    private int height;
 
     // All args class constructor
-    public Person(String Name, int Age, double Weight, double Height) {
+    public Person(String Name, int Age, int Height, int Weight) {
         this.age = Age;
         this.weight = Weight;
         this.height = Height;
@@ -70,11 +70,11 @@ public class Person {
         return this.age;
     }
 
-    public double getWeight() {
+    public int getWeight() {
         return this.weight;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return this.height;
     }
 

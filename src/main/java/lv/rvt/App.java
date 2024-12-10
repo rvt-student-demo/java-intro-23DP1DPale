@@ -644,25 +644,44 @@ public class App
 
         // System.out.println("Bye bye");
 
-        boolean isProgramRunning = true;
-        System.out.println("Welcome to person manager, type \"help\" to see avaible commands.");
-        while (isProgramRunning) {
-            String command = scanner.nextLine();
+        // boolean isProgramRunning = true;
+        // System.out.println("Welcome to person manager, type \"help\" to see avaible commands.");
+        // while (isProgramRunning) {
+        //     String command = scanner.nextLine();
 
-            if (command.equals("exit")) {
-                System.out.println("Thanks, bye bye!");
-                isProgramRunning = false;
-            } else if (command.equals("show")) {
-                ArrayList<Person> persons = PersonManager.getPersonList();
-                System.out.println("----------------------------------------------------");
-                System.out.println("|  Name  | Age | Weight | Height | Body mass index |");
-                System.out.println("----------------------------------------------------");
-                for (Person person: persons) {
-                    System.out.printf("| %-7s| %-4d| %-7.1f| %-7.1f| %-16.2f|\n", person.getName(), person.getAge(), person.getWeight(), person.getHeight(), person.bodyMassIndex());
-                }
-                System.out.println("----------------------------------------------------");
-            }
-            System.out.println("Your command was: " + command);
-        }
+        //     if (command.equals("exit")) {
+        //         System.out.println("Thanks, bye bye!");
+        //         isProgramRunning = false;
+        //     } else if (command.equals("show")) {
+        //         ArrayList<Person> persons = PersonManager.getPersonList();
+        //         System.out.println("----------------------------------------------------");
+        //         System.out.println("|  Name  | Age | Weight | Height | Body mass index |");
+        //         System.out.println("----------------------------------------------------");
+        //         for (Person person: persons) {
+        //             System.out.printf("| %-7s| %-4d| %-7.1f| %-7.1f| %-16.2f|\n", person.getName(), person.getAge(), person.getWeight(), person.getHeight(), person.bodyMassIndex());
+        //         }
+        //         System.out.println("----------------------------------------------------");
+        //     }
+        //     System.out.println("Your command was: " + command);
+        // }
+
+        HealthStation childrensHospital = new HealthStation();
+
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
     }
 }
