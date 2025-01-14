@@ -710,12 +710,30 @@ public class App
 
         // System.out.println(date1.equals(date2));
 
-        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+        // Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+        // Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        // Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));
-        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));
+        // System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));
+        // System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));
 
+        Box box = new Box(5, 7, 10);
+
+        Box biggerBox = box.biggerBox(box);
+        Box smallerBox = box.smallerBox(box);
+
+        System.out.println(biggerBox.width());
+        System.out.println(biggerBox.height());
+        System.out.println(biggerBox.length());
+        System.out.println();
+        System.out.println(smallerBox.width());
+        System.out.println(smallerBox.height());
+        System.out.println(smallerBox.length());
+        System.out.println();
+        System.out.println(box.width());
+        System.out.println(box.height());
+        System.out.println(box.length());
+
+        System.out.println(smallerBox.nests(box));
     }
 }
