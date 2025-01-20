@@ -717,23 +717,39 @@ public class App
         // System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));
         // System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));
 
-        Box box = new Box(5, 7, 10);
+        // Box box = new Box(5, 7, 10);
 
-        Box biggerBox = box.biggerBox(box);
-        Box smallerBox = box.smallerBox(box);
+        // Box biggerBox = box.biggerBox(box);
+        // Box smallerBox = box.smallerBox(box);
 
-        System.out.println(biggerBox.width());
-        System.out.println(biggerBox.height());
-        System.out.println(biggerBox.length());
-        System.out.println();
-        System.out.println(smallerBox.width());
-        System.out.println(smallerBox.height());
-        System.out.println(smallerBox.length());
-        System.out.println();
-        System.out.println(box.width());
-        System.out.println(box.height());
-        System.out.println(box.length());
+        // System.out.println(biggerBox.width());
+        // System.out.println(biggerBox.height());
+        // System.out.println(biggerBox.length());
+        // System.out.println();
+        // System.out.println(smallerBox.width());
+        // System.out.println(smallerBox.height());
+        // System.out.println(smallerBox.length());
+        // System.out.println();
+        // System.out.println(box.width());
+        // System.out.println(box.height());
+        // System.out.println(box.length());
 
-        System.out.println(smallerBox.nests(box));
+        // System.out.println(smallerBox.nests(box));
+
+        // Engine engine = new Engine("combustion", "hz", "volkswagen", "VW GOLF 1L 86-91");
+        // System.out.println(engine.getEngineType());
+        // System.out.println(engine.getManufacturer());
+
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+        printPersons(persons);
+    }
+
+    public static void printPersons(ArrayList<Person> persons) {
+        for (Person person: persons) {
+            System.out.println(person);
+        }
     }
 }

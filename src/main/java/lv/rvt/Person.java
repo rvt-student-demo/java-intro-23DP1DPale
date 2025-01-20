@@ -5,22 +5,28 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    private String address;
 
     // All args class constructor
-    public Person(String Name, int Age, int Height, int Weight) {
+    public Person(String Name, int Age, int Height, int Weight, String address) {
         this.age = Age;
         this.weight = Weight;
         this.height = Height;
         this.name = Name;
+        this.address = address;
     }
 
     // Second constructor woth only one parameter
     public Person(String name) {
-        this(name, 0, 0, 0);
+        this(name, 0, 0, 0, "unknown");
     }
 
-    public Person() {
-        
+    public Person(String name, int age) {
+        this(name, age, 0, 0, "unknown");
+    }
+
+    public Person(String name, String address) {
+        this(name, 0, 0, 0, address);
     }
 
     public void setName(String name) {
@@ -44,8 +50,9 @@ public class Person {
         return 206.3 - (0.711 * this.age);
     }
 
+    @Override
     public String toString() {
-        return "Name: " + this.name + ", age: " + this.age + ", weight: " + this.weight + ", height: " + this.height;
+        return this.name + "\n  " + this.address;
     }
 
     public void printPerson() {
