@@ -740,16 +740,24 @@ public class App
         // System.out.println(engine.getEngineType());
         // System.out.println(engine.getManufacturer());
 
-        ArrayList<Person> persons = new ArrayList<Person>();
-        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+    //     ArrayList<Person> persons = new ArrayList<Person>();
+    //     persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+    //     persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-        printPersons(persons);
-    }
+    //     printPersons(persons);
 
-    public static void printPersons(ArrayList<Person> persons) {
-        for (Person person: persons) {
-            System.out.println(person);
-        }
+    // public static void printPersons(ArrayList<Person> persons) {
+    //     for (Person person: persons) {
+    //         System.out.println(person);
+    //     }
+    // }
+
+    ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+    juice.addToWarehouse(1000.0);
+    juice.takeFromWarehouse(11.3);
+    System.out.println(juice.getName());
+    juice.addToWarehouse(1.0);
+    System.out.println(juice);
+    
     }
 }
