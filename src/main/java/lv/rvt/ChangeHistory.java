@@ -13,7 +13,7 @@ public class ChangeHistory {
         this.changeHistory.add(status);
     }
 
-    public void  clear() {
+    public void clear() {
         this.changeHistory.clear();
     }
 
