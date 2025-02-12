@@ -23,7 +23,7 @@ public class ChangeHistory {
 
     public double maxValue() {
         Double max = this.changeHistory.get(0);
-        for (Double history: this.changeHistory) {
+        for (Double history: changeHistory) {
             if (history > max) {
                 max = history;
             }
@@ -33,7 +33,7 @@ public class ChangeHistory {
 
     public double minValue() {
         Double min = this.changeHistory.get(0);
-        for (Double history: this.changeHistory) {
+        for (Double history: changeHistory) {
             if (history < min) {
                 min = history;
             }
@@ -44,7 +44,7 @@ public class ChangeHistory {
 
     public double average() {
         Double sum = 0.0;
-        for (Double history: this.changeHistory) {
+        for (Double history: changeHistory) {
             sum += history;
         }
 
