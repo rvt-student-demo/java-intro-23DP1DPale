@@ -11,7 +11,11 @@ public class Book implements Packable {
         this.weight = weight;
     }
 
-    double weight() {
-        
+    public double weight() {
+        return this.weight;
+    }
+
+    public String toString() {
+        return this.author + ": "  + this.name;
     }
 }

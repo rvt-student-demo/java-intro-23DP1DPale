@@ -13,7 +13,11 @@ public class CD implements Packable {
         this.weight = 0.1;
     }
 
-    double weight() {
+    public double weight() {
+        return this.weight;
+    }
 
+    public String toString() {
+        return this.artist + ": "  + this.name + "(" + this.publicationYear + ")";
     }
 }
